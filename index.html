@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Tournament schedule form</title>
+  <style>
+    body{
+      background-color: #9700CB;
+      text-align: left;
+    }
+    header{
+        background-color: #A56BB9;
+    }
+    section{
+        background-color: #A837CF;
+    }
+    .form-group{
+      display:table-row-group;
+
+    }
+  </style>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <div>
+        <h1 class="text-primary Title">Tournaments form</h1>
+    </div>
+    <div>
+        <p>Please, fill this survey so we can determine an adecuate date, hour and venue for the tournaments:</p>
+    </div>
+  </header>
+  <survey>
+    <div>
+        <form action="/actIII_page.php">
+            <section>
+              <div class="form-group">
+                <label for="fname">First name:   </label> <input type="text" name="fname">
+                <label for="lname">Last name:    </label> <input type="text" name="lname">
+                <br>
+                <br>
+              </div>
+              <div>  
+                <label for="tag">In-game tag:  </label> <input type="text" name="tag">
+                <label for="age">Age:          </label> <input type="number" min="1" max="2" name="age">
+                <br>
+                <br>
+              </div>
+              <div>
+                <label for="emailS">Email:        </label> <input type="email" name="emailS">
+                <label for="phone">Phone number: </label> <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                <br>
+              </div>
+                <br>
+              </section>
+            <section>
+                <label for="games">Select the game's tournament you want to participate</label>
+            </section>
+            <section>    
+                <select id="games" name="games">
+                    <option value="" selected>Choose the game...</option>
+                    <option value="fortnite">Fortnite</option>
+                    <option value="ssb">Super Smash bros. Ultimate</option>
+                    <option value="clash">Clash Royal</option>
+                    <option value="lol">League of Legends</option>
+                </select>
+                <br>
+                
+                <p>Choose three dates at wich you could participate:</p>
+                  <input type="datetime-local" id="fdate" name="fdate">
+                  <input type="datetime-local" id="sdate" name="sdate">
+                  <input type="datetime-local" id="tdate" name="tdate">
+                <br>
+                <p>Select the area you are more comfortable attending to:</p>
+                  <input type="radio" name="venue" value="north" id="north">North
+                <br>
+                  <input type="radio" name="venue" value="northeast" id="northeast">Northeast
+                <br>
+                  <input type="radio" name="venue" value="northwest" id="northwest">Northwest
+                <br>
+                  <input type="radio" name="venue" value="downtown" id="downtown">Downtown
+
+                <br>
+                <br>
+
+                <input type="checkbox" id="secondsurvey" name="secondsurvey">
+                <label for="secondsurvey">Do you want to receive a following survey in the upcoming days?</label>
+
+                <br>
+                <p>You can write feedback and extra commentaries. Thanks for your time.</p>
+                <textarea name="commentaries" rows = "5" cols = "50"></textarea>
+            </section>
+            <section>
+                <input type="submit" value="Submit survey">
+            </section>
+        </form>
+    </div>
+  </survey>
+</body>
+
+</html>
